@@ -10,4 +10,7 @@ Link YouTube : https://www.youtube.com/watch?v=Bbh4GbNqLxY
 #### 2) "Modification of the Environment"
 Link YouTube : https://www.youtube.com/watch?v=grBkiawvGXw
 
+#### 3) "Appearance"
+Link YouTube : https://www.youtube.com/watch?v=WRW25_iv4Mk
+
 # <h4>Official Webots Tutorial: https://cyberbotics.com/doc/guide/tutorials</h4>
