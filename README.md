@@ -8,6 +8,6 @@
 - Kelas : TK-43-GAB
 
 <h2 align="center">Material</h2>
-- Official Webots Tutorial: https://cyberbotics.com/doc/guide/tutorials
+- Official Webots Tutorial : https://cyberbotics.com/doc/guide/tutorials
 
 
