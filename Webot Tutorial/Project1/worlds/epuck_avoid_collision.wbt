@@ -1,0 +1,174 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+
+WorldInfo {
+  basicTimeStep 64
+}
+Viewpoint {
+  orientation 0.2529518909442801 0.7747081068321102 -0.5795193612609685 0.3316901359665249
+  position -2.7995138468740937 0.663941731360626 0.882908470792984
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+SpotLight {
+  attenuation 0 0 1
+  beamWidth 1
+  cutOffAngle 1.5
+  direction 0 1 -1
+  intensity 4
+  location 1 1 1
+}
+PointLight {
+  attenuation 0 0 1
+  location 0 0.3 0
+  on FALSE
+}
+DirectionalLight {
+  direction 0 -1 0
+  on FALSE
+}
+Floor {
+  size 2 2
+}
+DEF WALL Solid {
+  translation 0 -0.99 0.04
+  rotation 1 0 0 -1.5707953071795862
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../Downloads/th.jpeg"
+          ]
+        }
+      }
+      geometry Box {
+        size 2 0.1 0.05
+      }
+    }
+  ]
+  name "solid(1)"
+}
+DEF WALL Solid {
+  translation 0 0.99 0.0400011
+  rotation 1 0 0 -1.5707953071795862
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../Downloads/th.jpeg"
+          ]
+        }
+      }
+      geometry Box {
+        size 2 0.1 0.05
+      }
+    }
+  ]
+  name "solid(2)"
+}
+DEF WALL Solid {
+  translation -0.98 0.02 0.0399972
+  rotation -0.577349935856137 0.5773509358560258 -0.577349935856137 2.09439
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../Downloads/th.jpeg"
+          ]
+        }
+      }
+      geometry Box {
+        size 2 0.1 0.05
+      }
+    }
+  ]
+  name "solid(3)"
+}
+DEF WALL Solid {
+  translation 0.98 0.0200006 0.0399978
+  rotation -0.577349935856137 0.5773509358560258 -0.577349935856137 2.09439
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../Downloads/th.jpeg"
+          ]
+        }
+      }
+      geometry Box {
+        size 2 0.1 0.05
+      }
+    }
+  ]
+  name "solid(4)"
+}
+WoodenBox {
+  translation -0.20765183427283254 0.0401998823158864 0.04984304
+  rotation 3.887988120500043e-16 8.135248576186817e-16 0.9999999999999999 0.49101901344200466
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation -0.14115979876682275 -0.20915588788121686 0.04984304106759517
+  rotation -2.5959439988301606e-16 -2.3580676847309293e-16 -0.9999999999999999 1.0282601872472275
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation 0.20536319285410903 -0.2766783898487092 0.04984304106759519
+  rotation -8.989335291900342e-15 4.5682486037597055e-14 -1 0.0047617959163105275
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+E-puck {
+  hidden position_0_0 642.0772105040439
+  hidden position_0_1 678.0943164802453
+  hidden rotation_1 0 1 0 1.192309171726112
+  hidden rotation_2 0 -1 0 0.48969669515002817
+  translation -0.03658480541411397 0.25900434062578 -0.00011382300736713716
+  rotation 2.262159560997206e-09 -2.3879535013435647e-09 1 0.5081999625021049
+  controller "epuck_avoid_collision"
+  controllerArgs [
+    ""
+  ]
+}
+DEF BALL Solid {
+  translation -0.07107908110937257 0.3761256319071302 0.048356329789462915
+  rotation 0.8101455612302855 -0.4879870194004618 -0.3248581821587981 1.5893120799085367
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "../Downloads/red_brick_wall.jpg"
+          ]
+        }
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject DEF BALL_GEOMETRY Sphere {
+    radius 0.05
+    subdivision 2
+  }
+  physics Physics {
+  }
+  linearVelocity 0 0 -4.333694513222328e-08
+}
